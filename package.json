@@ -4,10 +4,15 @@
   "description": "react-webpack boiler plate",
   "main": "index.html",
   "scripts": {
-    "start": "webpack-dev-server --mode development"
+    "start": "webpack-dev-server --env.ENVIRONMENT=development --open --config webpack.dev.js",
+    "serve:staging": "webpack-dev-server --env.ENVIRONMENT=staging --open --config webpack.dev.js",
+    "serve:prod": "webpack-dev-server --env.ENVIRONMENT=production --open --config webpack.dev.js",
+    "build": "webpack --env.ENVIRONMENT=production --config webpack.prod.js",
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "test": "echo \"No tests\" && exit 0"
   },
   "author": "Necoline Hubner",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
