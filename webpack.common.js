@@ -25,16 +25,9 @@ module.exports = {
   resolve: { extensions: ["*", ".js", ".jsx"] },
   node: { fs: "empty" },
   output: {
-    publicPath: "/",
-    filename: "[name].bundle.js",
-    chunkFilename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "dist/"),
+    publicPath: "/dist/",
+    filename: "bundle.js"
   },
-  devServer: {
-    contentBase: path.join(__dirname, "public/"),
-    port: 3000,
-    publicPath: "http://localhost:3000/dist/",
-    hotOnly: true
-  },
-  plugins: [new CleanWebpackPlugin(["dist"])]
+  plugins: [new webpack.HotModuleReplacementPlugin()]
 };
