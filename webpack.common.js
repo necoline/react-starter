@@ -15,10 +15,6 @@ module.exports = {
           presets: ["@babel/env"],
           plugins: ["@babel/plugin-transform-runtime"]
         }
-      },
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"]
       }
     ]
   },
