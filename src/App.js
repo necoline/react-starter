@@ -1,13 +1,27 @@
-import React, { Component } from "react";
+import React from 'react';
+import Button from './components/Button';
+import Heading from './components/Heading';
+import styled from 'styled-components';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="app">
-        <h1> Let's get started! </h1>
-      </div>
-    );
-  }
+import theme from './theme'
+
+const AppPage = styled.div`
+  text-align: center;
+`;
+
+function App() {
+  return (
+    <AppPage>
+      <Heading theme={theme.main}>
+          DevSeed Storybook
+      </Heading>
+        <Button 
+          theme={theme.main}
+          variation='base-raised-semidark'
+          size='medium'
+        >Click Me</Button>
+    </AppPage>
+  );
 }
 
 export default App;

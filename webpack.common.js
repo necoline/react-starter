@@ -1,6 +1,8 @@
 const path = require("path");
 const webpack = require("webpack");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
+// import css from './src/index.css';
+// import css from 'file.css';
 
 module.exports = {
   entry: "./src/index.js",
@@ -15,6 +17,10 @@ module.exports = {
           presets: ["@babel/env"],
           plugins: ["@babel/plugin-transform-runtime"]
         }
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
       }
     ]
   },
