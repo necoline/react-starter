@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './components/Button';
+import { Sample } from './components/SampleButton';
 import Heading from './components/Heading';
 import styled from 'styled-components';
 
@@ -20,6 +21,7 @@ function App() {
           variation='base-raised-semidark'
           size='medium'
         >Click Me</Button>
+      <Sample>hey</Sample>
     </AppPage>
   );
 }

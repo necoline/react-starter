@@ -1,0 +1,10 @@
+{
+    "name": "devseed-sample-btn",
+    "version": "1.0.0",
+    "description": "react-webpack boiler plate",
+    "main": "dist/samplebutton.min.js",
+    "scripts": {
+      "build": "rollup -c -o dist/samplebutton.min.js",
+      "test": "echo \"No tests\" && exit 0"
+    }
+}
